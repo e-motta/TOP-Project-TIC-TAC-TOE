@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <script src="./script.js" defer></script>
+    <title>PROJECT: TIC TAC TOE</title>
+</head>
+<body>
+    <div class="introduction">
+        <div class="header">TIC-TAC-TOE</div>
+        <form action="#" method="post" id="name" class="display">
+            <label class="message-name">Enter your name:</label>
+            <input type="text" class="name-input" autofocus required>
+        </form>
+        <button type="submit" class="btn a-btn start-game-btn" form="name">PLAY GAME</button>
+    </div>
+    <div class="main intangible">
+        <div class="header">TIC-TAC-TOE</div>
+        
+        <div class="display">
+            <div class="score">
+                <span class="player">Player</span>
+                <div class="score-nums">
+                    <span class="player-score">0</span>
+                    <span class="x">x</span>
+                    <span class="computer-score">0</span>
+                </div>
+                <span class="computer">Computer</span>
+            </div>
+            <div class="message">Click on the board to start playing</div>
+        </div>
+        <div class="content">
+            <div class="gameboard-container">
+                <div class="cell" id="0"></div>
+                <div class="cell" id="1"></div>
+                <div class="cell" id="2"></div>
+                <div class="cell" id="3"></div>
+                <div class="cell" id="4"></div>
+                <div class="cell" id="5"></div>
+                <div class="cell" id="6"></div>
+                <div class="cell" id="7"></div>
+                <div class="cell" id="8"></div>
+            </div>
+        </div>
+        <button class="btn next-round-btn invisible">PLAY NEXT ROUND</button>
+    </div>
+</body>
+</html>

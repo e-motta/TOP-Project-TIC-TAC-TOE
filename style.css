@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Monaco';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Monaco'), url('Monaco.woff') format('woff');
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Monaco', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    place-content: center;
+}
+
+.main, .introduction {
+    display: grid;
+    gap: 30px;
+    background-color: white;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 25px;
+    width: 900px;
+}
+
+.intangible {
+    display: none;
+}
+
+.header {
+    justify-self: center;
+    font-size: 5em;
+}
+
+.content {
+    --border-width: 8px;
+    --board-side: 120px;
+
+    display: grid;
+    justify-content: center;
+}
+
+.gameboard-container {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    font-size: calc(var(--board-side) * .8);
+    border: calc(var(--border-width) / 2) solid black;
+}
+
+.cell {
+    border: calc(var(--border-width) / 2) solid black;
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    width: var(--board-side);
+    height: var(--board-side);
+    cursor: pointer;
+    font-family: 'Monaco';
+    font-weight: 900;
+}
+
+.cell:hover, .next-round-btn:hover, .name-input:hover, .start-game-btn:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+.cell:active, .next-round-btn:active, .name-input:active, .start-game-btn:active {
+    background-color: rgb(216, 216, 216);
+}
+
+.display {
+    display: grid;
+    place-content: center;
+    font-size: 2em;
+    border: 10px solid black;
+    padding: 20px;
+    justify-self: center;
+    gap: 30px;
+}
+
+.display .score {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.score-nums {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    border: 5px solid black;
+    padding: 8px;
+    width: 225px;
+}
+
+.display .score .player,
+.display .score .player-score {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.display .score .computer,
+.display .score .computer-score {
+    display: flex;  
+    justify-content: flex-start;
+}
+
+.message, .message-name {
+    justify-self: center;
+    height: 1em;
+}
+
+.btn {
+    justify-self: center;
+    border: 5px solid black;
+    background-color: white;
+    font-size: 2em;
+    border-radius: 15px;
+    padding: 5px 15px;
+    box-shadow: 0px 5px 5px rgb(171, 171, 171);
+    cursor: pointer;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.name-input {
+    border-radius: 15px;
+    border: 3px solid black;
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+}
+
+.name-input:focus {
+    border: 3px solid rgb(72, 72, 72);
+}
+
+.alert {
+    border: 3px solid rgb(155, 70, 70);
+    background-color: rgb(255, 246, 246);
+}
